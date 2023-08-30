@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classification</title>
+</head>
+<body>
+    <h1>Image Classification Result:</h1>
+    {% if prediction %}
+    <p>Predicted class: {{ prediction }}</p>
+
+    <img src="{{ path }}" alt="Uploaded Image">
+
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Classify">
+    </form>
+</body>
+</html>
